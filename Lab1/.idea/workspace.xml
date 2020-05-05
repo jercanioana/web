@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5ab28e97-2e8e-402f-a4ca-63f9a8611d79" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1YQnC6UdXVKaO7WGj50b5K00Yb4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../movie_catalog" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ioana\IdeaProjects\Lab1\video" />
+      <recent name="C:\Users\ioana\IdeaProjects\Lab1\img" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ioana\IdeaProjects\Lab1\video" />
+      <recent name="C:\Users\ioana\IdeaProjects\Lab1\audio" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5ab28e97-2e8e-402f-a4ca-63f9a8611d79" name="Default Changelist" comment="" />
+      <created>1582883554610</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582883554610</updated>
+      <workItem from="1582883560871" duration="196000" />
+      <workItem from="1583418544315" duration="12815000" />
+      <workItem from="1583565927117" duration="23000" />
+      <workItem from="1583941516889" duration="3673000" />
+      <workItem from="1583948372607" duration="1791000" />
+      <workItem from="1584693582349" duration="627000" />
+      <workItem from="1584695436097" duration="17000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="458" y="220" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583944805576">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="458" y="220" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1583944805576" />
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1584695446560">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1584695446560" />
+    <state x="465" y="242" key="com.intellij.ide.util.TipDialog" timestamp="1584695441122">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="465" y="242" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1584695441122" />
+    <state x="209" y="142" key="new project wizard" timestamp="1583950809628">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="209" y="142" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1583950809628" />
+  </component>
+</project>

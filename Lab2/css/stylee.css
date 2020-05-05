@@ -1,0 +1,60 @@
+body{
+  background-color: navajowhite;
+}
+#line1{
+  background: linear-gradient(rgba(255,255,255,0), rgb(174, 177, 255),rgba(255,255,255,0));
+  height: 250px;
+  width: 5px;
+  position: relative;
+  left:37.5%;
+
+}
+
+#line2{
+  background: linear-gradient(45deg,rgba(255,255,255,0), rgb(174, 177, 255),rgba(255,255,255,0));
+  width: 250px;
+  height: 5px;
+  position: relative;
+  left: 37.5%;
+  bottom: 260px;
+}
+#line3{
+
+  background: linear-gradient(45deg,rgba(255,255,255,0), rgb(174, 177, 255),rgba(255,255,255,0));
+  width: 250px;
+  height: 5px;
+  position: relative;
+  left: 37.5%;
+
+}
+#line4{
+
+  background: linear-gradient(rgba(255,255,255,0), rgb(174, 177, 255),rgba(255,255,255,0));
+  width: 5px;
+  height: 250px;
+  position: relative;
+  margin-left: 830px;
+  bottom: 260px;
+}
+svg.ball{
+  position: relative;
+}
+div.ballDiv{
+
+  float: right;
+  position: absolute;
+  padding-left: 200px;
+  height: 100px;
+}
+@keyframes example {
+  0%   {top:0;}
+  25%  {top:615px;}
+  50%  {top:325px;}
+  100% {top:0;}
+}
+div.ballDiv:hover svg.ball{
+    animation: example 20s infinite;
+  }
+
+
+

@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+  <script>
+
+    function resize(img){
+      var div = document.getElementById("placeForImage");
+      var i = document.createElement("img");
+      i.src = img.src;
+      i.id = "replace";
+      div.appendChild(i);
+    }
+    function getBackImg(){
+      var div = document.getElementById("placeForImage");
+      div.removeChild(document.getElementById("replace"));
+
+    }
+  </script>
+  <style>
+
+    #img1{
+      width:10%;
+      height:10%;
+    }
+    #img2{
+      width: 10%;
+      height: 110px;
+    }
+    #img3{
+      width:15%;
+      height:110px;
+    }
+    #img4{
+      width: 10%;
+      height: 110px;
+    }
+  </style>
+</head>
+
+<body >
+
+<div class="images">
+  <img id="img1" src="img/colorful-flower-on-dark-tropical-260nw-721703848.webp" onmouseover="resize(this)" onmouseout="getBackImg()"/>
+  <img id="img2" src="img/download.jpg" onmouseover="resize(this)" onmouseout="getBackImg()"/>
+  <img id="img3" src="img/CatsHaveFacialExpressionsButHardToRead_1024.jpg"  onmouseover="resize(this)" onmouseout="getBackImg()"/>
+  <img id="img4" src="img/photo-1494548162494-384bba4ab999.jpg"  onmouseover="resize(this)" onmouseout="getBackImg()"/>
+</div>
+  <div id="placeForImage">
+
+  </div>
+
+
+</body>
+
+</html>
