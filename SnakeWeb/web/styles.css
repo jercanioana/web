@@ -1,0 +1,8 @@
+#board{
+    alignment: center;
+    float: left;
+    padding-left:400px;
+}
+#game{
+    background-image: linear-gradient(to bottom right, red, yellow);
+}
