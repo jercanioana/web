@@ -18,7 +18,7 @@ public class DBManager {
     }
 
     public void addMove(Move move) {
-        String sql = "INSERT INTO Move(idMove, Name) VALUES("+ move.getID() + ",'" + move.getName() + "')";
+        String sql = "INSERT INTO Move(idMove,userID, Name) VALUES("+ move.getID() + "," + move.getUserid() + ",'" + move.getName() + "')";
         try{
             sqlStmt.execute(sql);
 
@@ -27,6 +27,16 @@ public class DBManager {
             e.printStackTrace();
         }
 
+    }
+
+    public void updateTime(int id, String time){
+        int result = 0;
+        try{
+            result = sqlStmt.executeUpdate("UPDATE Users SET TimeSpent = '" + time + "' WHERE UID = " + id);
+
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
     }
 
     public User authenticate(String username, String password) {

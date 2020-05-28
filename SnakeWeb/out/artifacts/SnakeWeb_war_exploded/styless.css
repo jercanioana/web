@@ -1,0 +1,44 @@
+#board{
+    alignment: center;
+    float: left;
+    padding-left:400px;
+}
+
+p{
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    color: red;
+
+}
+#game{
+    background-color: aquamarine;
+}
+#home{
+    background-color: aquamarine;
+    font-family: "Comic Sans MS";
+}
+#loginbutton{
+    border-radius: 10px;
+    font-family: "Comic Sans MS";
+    width:100px;
+}
+
+#logoutButton{
+    border-radius: 10px;
+    float:bottom;
+    font-family: "Comic Sans MS";
+    width:100px;
+
+}
+h1{
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}

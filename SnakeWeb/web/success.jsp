@@ -8,20 +8,24 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
-<head>
-    <title>Title</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="js/jquery-3.4.1.js"></script>
-    <script src="js/ajax-utils.js"></script>
-
-</head>
-<body id="game" onload="generateFood(); generateObstacle(); main();">
 <%! User user; %>
 <%  user = (User) session.getAttribute("user");
-    if (user != null) {
-        out.println("Welcome "+user.getUsername());
+    if (user != null){
+
 %>
+<head>
+    <title>Title</title>
+    <link rel="stylesheet" href="styless.css">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/ajax-utils.js"></script>
+    <script>let userid = <%= user.getID()%>;
+    </script>
+</head>
+
+<body id="game" onload="generateFood(); generateObstacle1(); generateObstacle2(); generateObstacle3(); main();">
+
     <canvas id="board" width="600", height="600"></canvas>
+    <button id="logoutButton" onclick="destroySession()">Logout</button>
     <script src="snake.js"></script>
 
 </body>
