@@ -1,0 +1,107 @@
+﻿form{
+    float:left;
+}
+button {
+    border-radius: 10px;
+}
+#loginbutton {
+    border-radius: 10px;
+    width: 100px;
+}
+
+#addButton {
+    border-radius: 10px;
+    width: 100px;
+}
+
+#Addingform {
+    margin-left: 100px;
+    width: 400px;
+}
+
+#Updatingform #id {
+    visibility: hidden;
+}
+
+#deleteID{
+    visibility: hidden;
+}
+
+#Addingform input {
+    margin-left: 100px;
+    width: 400px;
+}
+
+#Addingform label {
+    margin-left: 100px;
+    width: 400px;
+}
+
+#buttonCategory {
+    border-radius: 10px;
+}
+
+#updateButton {
+    border-radius: 10px;
+    width: 100px;
+}
+
+#deleteButton {
+    border-radius: 10px;
+    width: 100px;
+}
+
+#totalPages{
+    visibility: hidden;
+}
+
+#Updatingform {
+    
+    margin-left: 100px;
+    width: 400px;
+}
+
+    #Updatingform input {
+        margin-left: 100px;
+        width: 400px;
+    }
+
+#pageNumber {
+    visibility: hidden;
+}
+
+#urlsDiv {
+    margin-left:200px;
+    width:400px;
+}
+#Deletingform input {
+    
+    width: 400px;
+}
+
+#Deletingform label {
+    
+    width: 400px;
+}
+#Updatingform label {
+    margin-left: 100px;
+    width: 400px;
+}
+#Deletingform {
+    float: left;
+    margin-left: 200px;
+    width: 400px;
+}
+
+
+h1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}

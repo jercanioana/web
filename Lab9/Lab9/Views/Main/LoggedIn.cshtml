@@ -1,0 +1,214 @@
+﻿@using Lab9.Models;
+@{
+    ViewBag.Title = "LoggedIn";
+
+}
+
+<h2>LoggedIn</h2>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddNewURL</title>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="~/Scripts/StyleSheet2.css" />
+    <script>
+        $(document).ready(function () {
+            $("#buttonCategory").click(function () {
+                var pageNumber = Number($('#pageNumber').text());
+                
+                $.get("/Main/GetURLsByCategory", {
+                    category: $("#category").val(),
+                    pageNumber: pageNumber
+                },
+                    function (data, status) {
+                        $("#maindiv").html(data);
+                    });
+            });
+        });
+        $(document).ready(function () {
+            $("#getURLsButton").click(function () {
+                var pageNumber = Number($('#pageNumber').text());
+                
+                $.get("/Main/GetURLs", { pageNumber: pageNumber }, function (data, status) {
+                        $("#maindiv").html(data);
+                    });
+            });
+        });
+        $(document).ready(function () {
+            $("#Prev").click(function () {
+                var pageNumber = Number($('#pageNumber').text());
+
+                pageNumber = pageNumber - 1;
+                if (pageNumber <= 1)
+                    pageNumber = 1;
+                $('#pageNumber').html(pageNumber);
+                if (document.getElementById("category").value == "") {
+                    $.get("/Main/GetURLs", { pageNumber: pageNumber }, function (data, status) {
+                        $("#maindiv").html(data);
+                    });
+                } else {
+                    $.get("/Main/GetURLsByCategory", {
+                        category: $("#category").val(),
+                        pageNumber: pageNumber
+                    },
+                        function (data, status) {
+                            $("#maindiv").html(data);
+                        });
+                }
+
+                });
+        })
+        $(document).ready(function () {
+            $("#Next").click(function () {
+                var pageNumber = Number($('#pageNumber').text());
+
+                var totalPages = Number($('#totalPages').text());
+                pageNumber = pageNumber + 1;
+                if (pageNumber >= totalPages)
+                    pageNumber = totalPages;
+                $('#pageNumber').html(pageNumber);
+                if (document.getElementById("category").value == "") {
+
+                    $.get("/Main/GetURLs", { pageNumber: pageNumber }, function (data, status) {
+                        $("#maindiv").html(data);
+                    });
+                } else {
+
+                    $.get("/Main/GetURLsByCategory", {
+                        category: $("#category").val(),
+                        pageNumber: pageNumber
+                    },
+                        function (data, status) {
+                            $("#maindiv").html(data);
+                        });
+                }
+            })
+        })
+        function fillInputs() {
+            var table = document.getElementById("urlsTable");
+
+            var rows = table.getElementsByTagName("tr");
+            for (i = 1; i < rows.length; i++) {
+                var row = table.rows[i];
+                row.onclick = function (myrow) {
+                    return function () {
+                        document.getElementById("id").value = myrow.getElementsByTagName("td")[0].innerHTML;
+                        document.getElementById("deleteID").value = myrow.getElementsByTagName("td")[0].innerHTML;
+                        document.getElementById("IDLinkDelete").value = myrow.getElementsByTagName("td")[1].innerHTML;
+                        document.getElementById("IDLinkUpdate").value = myrow.getElementsByTagName("td")[1].innerHTML;
+
+                        document.getElementById("IDdescriptionUpdate").value = myrow.getElementsByTagName("td")[2].innerHTML;
+                        document.getElementById("IDcategoryUpdate").value = myrow.getElementsByTagName("td")[3].innerHTML;
+
+                    };
+                }(row);
+            }
+        }
+        $(document).ready(function () {
+            $('#addButton').click(function () {
+                var x = document.forms["Addingform"]["link"].value;
+                var y = document.forms["Addingform"]["description"].value;
+                var z = document.forms["Addingform"]["category"].value;
+                if (x == "" || y == "" || z == "") {
+                    alert("All fields are required");
+                    return false;
+                } else {
+                    alert("Added URL");
+
+                }
+            }
+            )
+        })
+        $(document).ready(function () {
+            $('#updateButton').click(function () {
+                var x = document.forms["Updatingform"]["link"].value;
+                var y = document.forms["Updatingform"]["description"].value;
+                var z = document.forms["Updatingform"]["category"].value;
+                if (x == "" || y == "" || z == "") {
+                    alert("All fields are required");
+                    return false;
+
+                } else {
+                    alert("Updated URL");
+
+                }
+            }
+            )
+        })
+        $(document).ready(function () {
+            
+            $('#deleteButton').click(function () {
+                
+                var result = confirm("Want to delete?");
+                if (result) {
+                    $.get("/Main/DeleteURL", {
+                        deleteID: document.getElementById("deleteID").value
+                    }, function(data, status) {
+                            alert("Item deleted.");
+                            window.location.reload();
+                        });
+                }
+            })
+        })
+
+        
+                    
+
+        
+    </script>
+</head>
+<body>
+    <div>
+        <form id="Addingform" action="/Main/SaveURL", method="GET">
+
+            <label for="link">Link : </label><input type="text" id="IDLink" name="link" /> <br />
+            <br />
+            <label for="description">Description : </label><input type="text" id="IDdescription" name="description" /> <br />
+            <br />
+            <label for="category">Category :</label> <input type="text" id="IDcategory" name="category" /> <br />
+            <br />
+            <input id="addButton" type="submit" value="Add URL" />
+            
+        </form>
+    </div>
+    <br />
+    <div>
+
+
+        <label for="link">Link you would like to delete: </label><br /> <input type="text" id="IDLinkDelete" name="link" /><br /><br />
+
+        <button id="deleteButton">Delete URL</button>
+        <input type="text" id="deleteID" name="deleteID" />
+
+    </div>
+    <div>
+        <form id="Updatingform" action="/Main/UpdateURL" method="GET">
+            
+            <input type="text" id="id" name="id" />
+            <label for="link">Link : </label><input type="text" id="IDLinkUpdate" name="link" /> <br />
+            <br />
+            <label for="description">Description : </label><input type="text" id="IDdescriptionUpdate" name="description" /> <br />
+            <br />
+            <label for="category">Category :</label> <input type="text" id="IDcategoryUpdate" name="category" /> <br />
+            <br />
+            <input id="updateButton" type="submit" value="Update URL" />
+        </form>
+    </div>
+    <div id="urlsDiv">
+        <label for="category">Category: </label><input type="text" id="category" /><br /><br />
+        <input id="buttonCategory" type="button" value="Get URLs By Category" />
+        <button id="getURLsButton">Get all URLs</button><br /><br />
+        <div id="maindiv"></div><br />
+        <div id="pageNumber">1</div>
+        <button id="Prev">Prev</button>
+        <button id="Next">Next</button>
+    </div>
+    <form action="/Main/Logout" method="post">
+        <input type="submit", name="logout", value="Log Out" />
+    </form>
+</body>
+</html>
+

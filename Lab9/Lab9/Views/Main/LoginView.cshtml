@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link rel="stylesheet" href="~/Scripts/StyleSheet1.css">
+    <script>
+        function validate() {
+                var x = document.forms["loginForm"]["username"].value;
+                var y = document.forms["loginForm"]["password"].value;
+                
+                if (x == "" || y == "") {
+                    alert("All fields are required");
+                    return false;
+                }
+            }
+            
+        
+    </script>
+</head>
+<body>
+    <div>
+        <form id="loginForm" action="/Main/Login" method="POST" onsubmit="return validate()">
+            <b>Enter username :</b> <input type="text" name="username">
+            <br><br>
+            <b>Enter password :</b> <input type="password" name="password">
+            <br><br>
+            <input id="loginbutton" type="submit" value="Login" />
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+﻿
+@using Lab9.Models;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewGetURLs</title>
+</head>
+<body>
+    <div>
+        @{
+            List<URL> urlList = (List<URL>)
+                ViewData["URLList"];
+        }
+        <table>
+            <tr>
+                <th>id</th>
+                <th>link</th>
+                <th>description</th>
+                <th>category</th>
+            </tr>
+            @foreach (URL url in urlList)
+            {
+                <tr>
+                    <td>@url.Id</td>
+                    <td>@url.link</td>
+                    <td>@url.description</td>
+                    <td>@url.category</td>
+                </tr>
+            }
+        </table>
+    </div>
+    Category: <input type="text" id="category" /><br />
+    <input id="button" type="button" value="get urls" />
+
+    <div id="maindiv"></div><br />
+
+</body>
+</html>

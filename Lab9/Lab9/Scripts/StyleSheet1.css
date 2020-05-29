@@ -1,0 +1,86 @@
+﻿
+#loginbutton {
+    border-radius: 10px;
+    width: 100px;
+}
+
+#addButton {
+    border-radius: 10px;
+    width: 100px;
+}
+
+#Addingform {
+    
+    margin-left: 100px;
+    width: 400px;
+}
+#Updatingform #id{
+    visibility: hidden;
+}
+
+    #Addingform input {
+        margin-left:100px;
+        width: 400px;
+    }
+
+    #Addingform label {
+        margin-left: 100px;
+        width: 400px;
+    }
+#Deletingform {
+
+    margin-left:auto;
+    width: 400px;
+}
+#updateButton {
+    border-radius: 10px;
+    width: 100px;
+}
+#deleteButton {
+    border-radius: 10px;
+    width: 100px;
+}
+#Updatingform {
+
+    background-color: navajowhite;
+    margin-left: 100px;
+    width: 400px;
+}
+#Updatingform input {
+    margin-left: 100px;
+    width: 400px;
+}
+#pageNumber{
+    visibility: hidden;
+}
+#urlsDiv {
+
+    float: right;
+    position: relative;
+
+}
+#Updatingform label {
+    margin-left: 100px;
+    width: 400px;
+}
+#Deletingform input {
+    margin-left: 150px;
+    width: 400px;
+}
+
+#Deletingform label {
+    margin-left: 150px;
+    width: 400px;
+}
+
+h1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}

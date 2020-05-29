@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FilterURLs</title>
+    <script src="~/Scripts/jquery-2.0.3.js"></script>
+    <script>
+			$(document).ready(function(){
+				$("#button").click(function() {
+					// parameter name: "test" from the ajax call is not actually used
+                    $.get("/Main/GetURLsByCategory", {
+                        category: $("#category").val()
+                    },
+						function(data,status) {
+						$("#maindiv").html(data);
+					});
+				});
+			});
+    </script>
+</head>
+<body>
+   Category: <input type="text" id="category" /><br />
+    <input id="button" type="button" value="get urls" />
+    
+    <div id="maindiv"></div><br />
+</body>
+</html>
+
+
